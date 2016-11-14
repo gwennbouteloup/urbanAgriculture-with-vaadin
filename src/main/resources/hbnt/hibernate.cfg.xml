@@ -1,0 +1,36 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->  
+  
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">gbouteloupPass1</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/urbanAgriDB</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="connection.pool_size">5</property>
+		<property name="hibernate.id.new_generator_mappings">false</property>
+
+		<!-- here all entities will come -->
+		<mapping class="agriculture.urban.model.Business_InstallationType_OnGround"/>
+		<mapping class="agriculture.urban.model.Business_InstallationType"/>
+		<mapping class="agriculture.urban.model.Business"/>
+		<mapping class="agriculture.urban.model.CommercializationMode"/>
+		<mapping class="agriculture.urban.model.Company"/>
+		<mapping class="agriculture.urban.model.CompanyLocation"/>
+		<mapping class="agriculture.urban.model.Farming"/>
+		<mapping class="agriculture.urban.model.FertilizationType"/>
+		<mapping class="agriculture.urban.model.FruitsAndVegetables"/>
+		<mapping class="agriculture.urban.model.InstallationLocation"/>
+		<mapping class="agriculture.urban.model.InstallationType"/>
+		<mapping class="agriculture.urban.model.IrrigationType"/>
+		<mapping class="agriculture.urban.model.Objective_Business"/>
+		<mapping class="agriculture.urban.model.Objective"/>
+		<mapping class="agriculture.urban.model.OnGroundInstallation"/>
+		<mapping class="agriculture.urban.model.OnRoofInstallation"/>
+		<mapping class="agriculture.urban.model.PhytosanitaryFightType"/>
+		<mapping class="agriculture.urban.model.Product_Commercialization"/>
+		<mapping class="agriculture.urban.model.Product"/>
+		<mapping class="agriculture.urban.model.ProductionCriteria"/>
+	</session-factory>
+</hibernate-configuration>
