@@ -37,7 +37,7 @@ Then this runing configurationa and enjoy!!! :)
 Runing process
 =======================
 1. Ensure that the database server is runing with an instance of urban agriculture database.
-2. Start tomcat server using Tomcat start defined inside "tomcat start and stop" directory
+2. Start tomcat server using Tomcat start defined inside "tomcat start and stop" directory.
 3. Run the project from eclipse using "Eclipse project runing configuration" as previously configured.
-3. Run the webapp using "http://localhost:8080/UrbanAgriculture-0.0.1-SNAPSHOT/" adress
+3. Run the webapp using "http://localhost:8080/UrbanAgriculture-0.0.1-SNAPSHOT/" adress.
 
