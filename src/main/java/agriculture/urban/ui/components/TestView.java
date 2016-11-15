@@ -41,6 +41,7 @@ public class TestView extends VerticalLayout implements TestViewIMVP, ClickListe
 		// Test database access
 		try {
 			Business_InstallationType_OnGround_DAOImpl business_InstallationType_OnGround_DAOImpl = new Business_InstallationType_OnGround_DAOImpl();
+			logger.info("business_InstallationType_OnGround_DAOImpl : "+ business_InstallationType_OnGround_DAOImpl.toString());
 			List<Business_InstallationType_OnGround>  list_business_InstallationType_OnGround_DAOImpl = business_InstallationType_OnGround_DAOImpl.getAll();
 			
 			if(list_business_InstallationType_OnGround_DAOImpl != null){
