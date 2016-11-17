@@ -1,7 +1,7 @@
 package agriculture.urban.database;
 
 import org.hibernate.cfg.Configuration;
-
+import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 
 public class HibernateUtil {

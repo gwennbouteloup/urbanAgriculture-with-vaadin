@@ -42,6 +42,7 @@ public class TestView extends VerticalLayout implements TestViewIMVP, ClickListe
 		try {
 			Business_InstallationType_OnGround_DAOImpl business_InstallationType_OnGround_DAOImpl = new Business_InstallationType_OnGround_DAOImpl();
 			logger.info("business_InstallationType_OnGround_DAOImpl : "+ business_InstallationType_OnGround_DAOImpl.toString());
+			business_InstallationType_OnGround_DAOImpl.coucou();
 			List<Business_InstallationType_OnGround>  list_business_InstallationType_OnGround_DAOImpl = business_InstallationType_OnGround_DAOImpl.getAll();
 			
 			if(list_business_InstallationType_OnGround_DAOImpl != null){
@@ -53,7 +54,7 @@ public class TestView extends VerticalLayout implements TestViewIMVP, ClickListe
 				logger.info("list_business_InstallationType_OnGround_DAOImpl is null...");
 			}
 			
-		} catch (Exception ex) {
+		} catch (Exception | ExceptionInInitializerError ex) {
 		    // handle any errors
 			logger.error("Exception using DAO: " + ex.getMessage());
 		}

@@ -1,15 +1,14 @@
 package agriculture.urban.model.DAO.impl;
 
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.Root;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -27,7 +26,7 @@ public class Business_InstallationType_OnGround_DAOImpl implements Business_Inst
 	protected EntityManager entityManager;
 
 	// for dev
-	public Business_InstallationType_OnGround_DAOImpl() {
+	public Business_InstallationType_OnGround_DAOImpl() throws ExceptionInInitializerError {
 		sessionFactory = HibernateUtil.getSessionFactory();
 	}
 
@@ -71,19 +70,26 @@ public class Business_InstallationType_OnGround_DAOImpl implements Business_Inst
 
 	@Override
 	public List<Business_InstallationType_OnGround> getAll() {
+		logger.info("TypedQuery coucou");
 		TypedQuery<Business_InstallationType_OnGround> allQuery = null;
 
 		try {
+			logger.info("Avant CriteriaBuilder");
 			CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+			logger.info("Avant CriteriaQuery");
 			CriteriaQuery<Business_InstallationType_OnGround> criteriaQuery = criteriaBuilder
 					.createQuery(Business_InstallationType_OnGround.class);
+			logger.info("Avant Root");
 			Root<Business_InstallationType_OnGround> rootEntry = criteriaQuery
 					.from(Business_InstallationType_OnGround.class);
+			logger.info("Après Root");
 			CriteriaQuery<Business_InstallationType_OnGround> all = criteriaQuery.select(rootEntry);
+			logger.info("avant createQuery");
 			allQuery = entityManager.createQuery(all);
 		} catch (Exception e) {
 			logger.severe("Exception in Business_InstallationType_OnGround_DAOImpl.getAll(): " + e.getMessage());
 		}
+		logger.info("avant allQuery.getResultList()");
 		return allQuery.getResultList();
 	}
 
@@ -124,6 +130,11 @@ public class Business_InstallationType_OnGround_DAOImpl implements Business_Inst
 				session.close();
 			}
 		}
+	}
+
+	// #GB TO_DELETE
+	public void coucou() {
+		logger.info("coucou");
 	}
 
 }
